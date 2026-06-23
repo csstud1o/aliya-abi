@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { overflow-x:hidden; }
+
+body {
+  /* Warm dark — pizza qovurilgan yog'och, ko'mir, iliq qo'ng'ir */
+  background-color: #0F0A08;
+  color: #F2EDE8;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+  cursor: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 2px; }
+::-webkit-scrollbar-track { background: #0F0A08; }
+::-webkit-scrollbar-thumb { background: #C8922A; border-radius: 2px; }
+::selection { background: #C8922A; color: #0F0A08; }
+
+.font-display { font-family: 'Playfair Display', Georgia, serif !important; }
+
+/* ── Layout ── */
+.container-main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.section-py { padding-top: 110px; padding-bottom: 110px; }
+
+@media (max-width: 768px) {
+  .container-main { padding: 0 20px; }
+  .section-py { padding-top: 72px; padding-bottom: 72px; }
+}
+
+/* ── Warm pizza color tokens ── */
+/* Primary gold-amber: #C8922A  */
+/* Warm cream text: #F2EDE8     */
+/* Surface warm dark: #1A120C   */
+/* Surface mid: #231810         */
+/* Muted text: #9A8070          */
+/* Border warm: rgba(200,146,42,0.14) */
+
+.label {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #C8922A;
+  font-family: 'Inter', sans-serif;
+}
+.c-gold { color: #C8922A; }
+.c-muted { color: #9A8070; }
+
+/* ── Buttons ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 32px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: none;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn-gold {
+  background: #C8922A;
+  color: #0F0A08;
+}
+.btn-gold:hover { background: #E0A832; color: #0F0A08; }
+
+.btn-ghost {
+  background: transparent;
+  color: #F2EDE8;
+  border: 1px solid rgba(242,237,232,0.2);
+}
+.btn-ghost:hover { border-color: #C8922A; color: #C8922A; }
+
+/* ── Form field ── */
+.field {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(200,146,42,0.14);
+  color: #F2EDE8;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.25s;
+  color-scheme: dark;
+}
+.field:focus { border-color: #C8922A; }
+.field::placeholder { color: rgba(242,237,232,0.22); }
+
+/* ── Clip ── */
+.clip { overflow: hidden; }
+
+/* ── Scroll-x ── */
+.scroll-x { overflow-x: auto; scrollbar-width: none; }
+.scroll-x::-webkit-scrollbar { display: none; }
+
+/* ═══════════════════════════════════════════════
+   MOBILE RESPONSIVE — Global Media Queries
+   ═══════════════════════════════════════════════ */
+
+/* ── Tablet (≤1024px) ── */
+@media (max-width: 1024px) {
+  .menu-grid   { grid-template-columns: repeat(2, 1fr) !important; }
+  .exp-grid    { grid-template-columns: repeat(2, 1fr) !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* ── Mobile (≤768px) ── */
+@media (max-width: 768px) {
+  /* Layout */
+  .about-grid    { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .reserve-grid  { grid-template-columns: 1fr !important; gap: 44px !important; }
+  .gallery-grid  { grid-template-columns: repeat(2, 1fr) !important; grid-auto-rows: 190px !important; }
+  .location-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .exp-grid      { grid-template-columns: 1fr !important; }
+  .menu-grid     { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+
+  /* Section padding */
+  .section-py { padding-top: 64px !important; padding-bottom: 64px !important; }
+
+  /* Container */
+  .container-main { padding-left: 16px !important; padding-right: 16px !important; }
+
+  /* Buttons */
+  .btn { padding: 12px 22px !important; font-size: 10px !important; }
+
+  /* Navbar height */
+  .navbar-inner { height: 60px !important; }
+}
+
+/* ── Small mobile (≤480px) ── */
+@media (max-width: 480px) {
+  .menu-grid     { grid-template-columns: 1fr !important; }
+  .gallery-grid  { grid-template-columns: 1fr !important; grid-auto-rows: 220px !important; }
+  .location-grid { grid-template-columns: 1fr !important; }
+  .footer-grid   { grid-template-columns: 1fr !important; }
+  .exp-grid      { grid-template-columns: 1fr !important; }
+}
+
+/* ── Touch devices — disable custom cursor ── */
+@media (hover: none) and (pointer: coarse) {
+  body { cursor: auto !important; }
+  .btn { cursor: pointer !important; }
+  button, a { cursor: pointer !important; }
+}
+
+/* ── Mobile specific tweaks ── */
+@media (max-width: 640px) {
+  /* Hero stats — 2x2 grid on mobile */
+  .hero-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+    margin-top: 28px !important;
+  }
+
+  /* Hide scroll hint on mobile */
+  .scroll-hint { display: none !important; }
+
+  /* Gallery tall span disabled */
+  .gallery-tall { grid-row: span 1 !important; }
+
+  /* Section heading sizes */
+  .section-py h2 { letter-spacing: -0.01em !important; }
+
+  /* Reserve form date/time grid */
+  .date-time-grid { grid-template-columns: 1fr !important; }
+
+  /* Featured section height */
+  section[style*="80vh"] { height: 70vh !important; min-height: 420px !important; }
+
+  /* About image aspect ratio */
+  .about-grid > div:first-child { aspect-ratio: 3/2 !important; }
+
+  /* Buttons full width on small screens */
+  .btn-block-mobile { width: 100% !important; justify-content: center !important; }
+
+  /* Footer bottom text */
+  .footer-bottom { flex-direction: column !important; align-items: flex-start !important; gap: 6px !important; }
+}
+
+/* ── Extra small (≤380px) ── */
+@media (max-width: 380px) {
+  .container-main { padding-left: 14px !important; padding-right: 14px !important; }
+  .btn { padding: 11px 18px !important; font-size: 9px !important; letter-spacing: 1.5px !important; }
+  .section-py { padding-top: 52px !important; padding-bottom: 52px !important; }
+}
+
+/* ── iOS safe area ── */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  footer { padding-bottom: calc(16px + env(safe-area-inset-bottom)) !important; }
+}
+
+/* ── Tap highlight ── */
+* { -webkit-tap-highlight-color: transparent; }
+
+/* ── Smooth scroll on iOS ── */
+html { -webkit-overflow-scrolling: touch; }
+
+/* ── Image display ── */
+img { display: block; max-width: 100%; }

@@ -1,0 +1,372 @@
+Agar maqsad **[https://gershon.vercel.app/](https://gershon.vercel.app/)** ga o‘xshash bo‘lsa, unda ortiqcha 3D pizza uchirishlar kerak emas. Sayt premium, minimalist, qorong‘i fonli, katta tipografiya va smooth animatsiyalar bilan bo‘lishi kerak.
+
+Kiro uchun quyidagi promptni ber:
+
+---
+
+# ALIYA ABI PREMIUM WEBSITE
+
+Create a premium restaurant website for "Aliya Abi" located in Termiz, Uzbekistan.
+
+The website style should be heavily inspired by the visual quality, layout structure, typography hierarchy, animations and storytelling approach of Gershon.vercel.app.
+
+DO NOT create a typical restaurant website.
+
+The feeling should be:
+
+* Modern
+* Elegant
+* Premium
+* Dark luxury
+* Cinematic
+* Minimalistic
+* Expensive
+
+Tech Stack:
+
+* Next.js 15
+* TypeScript
+* TailwindCSS
+* Framer Motion
+* Theatre.js
+* Anime.js
+* GSAP
+* Lenis Smooth Scroll
+* Spline (light usage)
+* Three.js (subtle effects only)
+
+---
+
+# DESIGN SYSTEM
+
+Background:
+#0A0A0A
+
+Surface:
+#111111
+
+Text:
+#F5F5F5
+
+Muted:
+#A1A1AA
+
+Accent Gold:
+#D4AF37
+
+Accent Orange:
+#FF6B35
+
+Borders:
+rgba(255,255,255,0.08)
+
+Glass:
+rgba(255,255,255,0.04)
+
+---
+
+# GLOBAL STYLE
+
+Large typography.
+
+Very large section spacing.
+
+Luxury restaurant branding.
+
+Every section should breathe.
+
+Nothing should feel crowded.
+
+Use smooth reveal animations.
+
+Use subtle parallax.
+
+No bright colors.
+
+No excessive effects.
+
+Everything should feel premium.
+
+---
+
+# HERO SECTION
+
+100vh fullscreen.
+
+Background video:
+
+slow-motion pizza preparation.
+
+Dark cinematic overlay.
+
+Large title:
+
+ALIYA ABI
+
+Below:
+
+Premium Pizza & Restaurant Experience in Termiz
+
+Buttons:
+
+View Menu
+
+Reserve Table
+
+Scroll indicator at bottom.
+
+Text reveal animation.
+
+Fade-up animations.
+
+Mouse parallax on title.
+
+---
+
+# ABOUT SECTION
+
+Two-column layout.
+
+Left:
+
+large image.
+
+Right:
+
+story text.
+
+Headline:
+
+A Taste Crafted With Passion
+
+Elegant typography.
+
+Text appears line by line while scrolling.
+
+Images zoom slightly on hover.
+
+---
+
+# SIGNATURE MENU SECTION
+
+Inspired by Gershon card design.
+
+Large menu cards.
+
+Cards should contain:
+
+* Food image
+* Food name
+* Description
+* Price
+
+Hover effects:
+
+* Image zoom
+* Border glow
+* Smooth lift animation
+
+Categories:
+
+Pizza
+
+Lavash
+
+Burger
+
+Hot Meals
+
+Soups
+
+Drinks
+
+Desserts
+
+---
+
+# FEATURED DISH SECTION
+
+One large premium section.
+
+Huge image.
+
+Dark overlay.
+
+Headline:
+
+Signature Pizza
+
+Large typography.
+
+Animated reveal.
+
+Subtle floating movement.
+
+Button:
+
+Order Now
+
+---
+
+# GALLERY SECTION
+
+Masonry layout.
+
+Large restaurant photos.
+
+Large food photos.
+
+Hover:
+
+zoom
+
+blur background
+
+light movement
+
+smooth transition
+
+Inspired by luxury restaurant websites.
+
+---
+
+# EXPERIENCE SECTION
+
+Full width dark section.
+
+Three feature blocks.
+
+Fresh Ingredients
+
+Fast Delivery
+
+Premium Quality
+
+Each feature card:
+
+glass effect
+
+icon animation
+
+hover interaction
+
+---
+
+# CUSTOMER REVIEWS
+
+Dark luxury cards.
+
+Glassmorphism.
+
+Large quotation marks.
+
+Smooth carousel.
+
+Review cards animate into view.
+
+---
+
+# RESERVATION SECTION
+
+Minimalist luxury form.
+
+Fields:
+
+Name
+
+Phone
+
+Guests
+
+Date
+
+Time
+
+Special Request
+
+Beautiful focus states.
+
+Premium button animation.
+
+---
+
+# LOCATION SECTION
+
+Full-width map.
+
+Dark styled map.
+
+Contact information.
+
+Working hours.
+
+Phone number.
+
+Telegram button.
+
+Instagram button.
+
+---
+
+# FOOTER
+
+Large logo.
+
+Navigation links.
+
+Social links.
+
+Copyright.
+
+Subtle animation.
+
+---
+
+# ANIMATION RULES
+
+Use Framer Motion everywhere.
+
+Fade Up
+
+Scale In
+
+Slide Reveal
+
+Text Reveal
+
+Parallax
+
+Image Zoom
+
+Smooth Hover
+
+No aggressive animations.
+
+No bouncing.
+
+No flashy effects.
+
+Animations should feel elegant.
+
+---
+
+# RESPONSIVE
+
+Mobile-first.
+
+Perfect tablet support.
+
+Perfect desktop support.
+
+Maintain luxury feeling on all devices.
+
+---
+
+# IMPORTANT
+
+The final result must feel almost identical in quality and atmosphere to Gershon.vercel.app, but redesigned completely for Aliya Abi restaurant branding, food content, colors and identity.
+
+Focus on typography, spacing, imagery and smooth animations more than heavy 3D effects.
+
+The goal is to make visitors think:
+"this restaurant looks premium before I even see the menu."
