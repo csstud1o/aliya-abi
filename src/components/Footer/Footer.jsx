@@ -67,7 +67,7 @@ export default function Footer() {
 
         <div className="footer-bottom" style={{ display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'10px', paddingTop:'24px', borderTop:'1px solid rgba(200,146,42,0.08)' }}>
           <p style={{ fontSize:'12px', color:'rgba(242,237,232,0.2)' }}>{t('footer_copy')}</p>
-          <p style={{ fontSize:'12px', color:'rgba(242,237,232,0.2)' }}>{t('footer_made')}</p>
+          <p style={{ fontSize:'12px', color:'rgba(242,237,232,0.2)' }}>admincoder.uz tomonidan yaratilgan</p>
         </div>
       </div>
       <style>{`@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr!important}}@media(max-width:600px){.footer-grid{grid-template-columns:1fr!important}}`}</style>

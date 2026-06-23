@@ -3,15 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+    <!-- user-scalable=no: 2 barmoq zoom bloklanadi, viewport-fit=cover: iOS safe area -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <meta name="description" content="Aliya Abi — Termiz Premium Pizza & Restaurant. Taste Beyond Expectations." />
     <title>Aliya Abi — Premium Restaurant, Termiz</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      /* ── Horizontal scroll & overscroll lock ── */
+      html, body {
+        overflow-x: hidden;
+        overscroll-behavior-x: none;   /* chapga/o'ngga surish bloklanadi */
+        overscroll-behavior-y: auto;   /* vertikal scroll ishlaydi */
+        touch-action: pan-y;           /* faqat vertikal touch ruxsatli */
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // 2 barmoq pinch-zoom va horizontal swipe bloklanadi
+      document.addEventListener('touchmove', function(e) {
+        if (e.touches.length > 1) {
+          e.preventDefault(); // pinch-zoom bloklash
+        }
+      }, { passive: false });
+
+      // Horizontal swipe (chapga/o'ngga) bloklanadi
+      let startX = 0;
+      document.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      document.addEventListener('touchmove', function(e) {
+        if (e.touches.length === 1) {
+          const deltaX = Math.abs(e.touches[0].clientX - startX);
+          const deltaY = Math.abs(e.touches[0].clientY - (e.touches[0].screenY - window.scrollY));
+          // Agar gorizontal harakat ko'proq bo'lsa — bloklash
+          if (deltaX > 10) {
+            e.preventDefault();
+          }
+        }
+      }, { passive: false });
+    </script>
   </body>
 </html>

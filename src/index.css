@@ -2,7 +2,13 @@
 @import "tailwindcss";
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { overflow-x:hidden; }
+
+html {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  /* Pinch-zoom bloklanadi — user-scalable=no bilan birgalikda */
+  touch-action: pan-y;
+}
 
 body {
   /* Warm dark — pizza qovurilgan yog'och, ko'mir, iliq qo'ng'ir */
@@ -11,8 +17,13 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   font-weight: 300;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
   cursor: none;
   -webkit-font-smoothing: antialiased;
+  /* iOS rubber-band chapga/o'ngga chiqishni bloklash */
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
 }
 
 ::-webkit-scrollbar { width: 2px; }
